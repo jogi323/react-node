@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
-class Dashboard extends Component {
+class  Dashboard extends Component {
   render() {
+    console.log(this.props.match)
+    
     return (
       <div>
-        <h1>Dashboard page</h1>
+        Dashoard
+        {this.props.children}
       </div>
     )
   }
