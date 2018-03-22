@@ -1,15 +1,21 @@
 module.exports = {
-    entry: './index.js',
-    output: {
-      filename: 'bundle.js'
-    },
-    module: {
-        rules: [
-          { 
-            test: /\.js$/, 
-            exclude: /node_modules/,
-            loader: 'babel-loader' }
-        ]
-      },
-      mode: 'production'
-  };
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        loader: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/
+      }
+    ]
+  },
+  mode: "production",
+  devServer: {
+    port: 8000,
+    historyApiFallback: true
+  },
+  performance: { hints: false }
+};
