@@ -4,28 +4,39 @@
   "description": "React as front end and node as back end",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --mode development"
   },
   "author": "jogi",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "node-sass": "^4.7.2",
+    "prop-types": "^15.6.1",
+    "sass-loader": "^6.0.7",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^3.3.7",
+    "history": "^4.7.2",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
+    "react-bootstrap-sidebar": "0.0.1",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "style-loader": "^0.20.3",
     "url-loader": "^1.0.1"
   }

@@ -9,15 +9,11 @@ class Home extends Component {
         super(props);
     }
   render() {
-      console.log(this.props.match)
     return (
       <div>
-        <Header urlParams={this.props.match}/>
-        {this.props.children}
-        {/* <Router> */}
-            {/* <Route exact path={`${this.props.match.url}`} component={Login}/>
-            <Route exact path={`${this.props.match.url}signup`} component={Signup}/>             */}
-        {/* </Router> */}
+        <Header/>
+        <Route exact path='/' component={Login}></Route>
+        <Route path='/signup' component={Signup}></Route>
       </div>
     )
   }

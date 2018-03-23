@@ -11,7 +11,7 @@ router.post('/login', function(req, res, next) {
     if(err){
       res.json({err:err});
     }else if(data.length){
-      res.json({msg:'Logged in successfully',data:data})
+      res.json({msg:'Logged in successfully',data:data[0]})
     }else{
       res.json({msg:'Invalid email or password'})
     }

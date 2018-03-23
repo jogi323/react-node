@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js'
   },
@@ -12,7 +12,7 @@ module.exports = {
       },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
-      {test: /\.scss$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]}
+      {test: /\.scss$/, use: [ 'style-loader', 'css-loader', 'sass-loader?sourceMap=true' ]}
     ]
   },
   mode: "production",
