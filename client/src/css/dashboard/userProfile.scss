@@ -1,8 +1,12 @@
 .user-details {
+    margin-left: 25%;
     .user-image {
-        img{
+        img {
             width: 400px;
             height: 300px;
         }
+    }
+    .user-name, .user-email, .user-mobile {
+        padding: 5px;
     }
 }

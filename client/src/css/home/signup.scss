@@ -1,12 +1,13 @@
 .register {
+    margin-top: 5%;
     form {
         background: #ccc;  
         padding-bottom: 15px;      
         .row {
-            margin-right: 0px !important;
-            margin-left: 0px !important;  
+            margin-right: 0px;
+            margin-left: 0px;  
             .no-padding {
-                padding: 0px !important;
+                padding: 0px;
             }          
         }
     }

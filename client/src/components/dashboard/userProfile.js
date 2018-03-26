@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { Table } from 'react-bootstrap';
 
-import {login} from '../../actions/loginAction';
 import '../../css/dashboard/UserProfile.scss';
 
 class UserProfile extends Component {
@@ -26,15 +25,15 @@ class UserProfile extends Component {
         </div>
         <div className="user-name">
           <label>Name: </label>
-          <span>{this.state.userDetails.firstname+ ' '+ this.state.userDetails.lastname}</span>
+          <span> {this.state.userDetails.firstname+ ' '+ this.state.userDetails.lastname}</span>
         </div>
         <div className="user-email">
           <label>Email-ID: </label>
-          <span>{this.state.userDetails.email}</span>
+          <span> {this.state.userDetails.email}</span>
         </div>
         <div className="user-mobile">
           <label>Mobile number: </label>
-          <span>{this.state.userDetails.mobile}</span>
+          <span> {this.state.userDetails.mobile}</span>
         </div>
       </div>:
       <div className="no-details">

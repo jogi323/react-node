@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
+import '../../css/common/sideNavbar.scss';
+
 class SideNavbar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="sideNavBar">
         <Nav>
             <NavItem componentClass="div">
                 <NavLink activeClassName="active" to={`${this.props.urlParams.url}/userdetails`}>

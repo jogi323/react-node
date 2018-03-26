@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
-import AllUsers from './allUsers';
-import UserProfile from './userProfile';
-import SideNavbar from '../common/sideNavbar';
-import Header from '../common/header';
+import AllUsers from './AllUsers';
+import UserProfile from './UserProfile';
+import SideNavbar from '../common/SideNavbar';
+import Header from '../common/Header';
 
 import '../../css/dashboard/dashboard.scss';
 

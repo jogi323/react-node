@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route , Switch} from 'react-router-dom';
 
-import Login from './components/home/login';
-import Signup from './components/home/signup';
-import Dashboard from './components/dashboard/dashboard';
+import Login from './components/home/Login';
+import Signup from './components/home/Signup';
+import Dashboard from './components/dashboard/Dashboard';
 
 class App extends Component {
   render() {

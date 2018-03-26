@@ -3,6 +3,12 @@
         ul {
             li {
                 padding: 15px;
+                span {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
             }
         }
     }

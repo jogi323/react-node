@@ -5,9 +5,9 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import '../../css/common/header.scss';
 
 class Header extends Component {
-  constructor(props){
-    super(props);
-  }
+  logout = () => {
+    localStorage.clear();
+  } 
   render() {
     return (
       <Navbar inverse collapseOnSelect>
@@ -18,10 +18,10 @@ class Header extends Component {
         </Navbar.Header>
         <Nav pullRight>
          <NavItem key={1} componentClass="span">
-           <NavLink activeClassName="active" to="/">Settings</NavLink>
+           <NavLink activeClassName="active" to="">Settings</NavLink>
          </NavItem>
          <NavItem key={2} componentClass="span">
-           <NavLink activeClassName="active" to="">Logout</NavLink>
+           <NavLink activeClassName="active" to="/" onClick={this.logout}>Logout</NavLink>
          </NavItem>
         </Nav>
       </Navbar>
