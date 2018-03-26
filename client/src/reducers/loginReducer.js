@@ -1,7 +1,7 @@
 import { USER_LOGIN } from '../constants/constant';
 
 const initialState = {
-    userDetails: {}
+    userDetails: []
 };
 
 export default function (state=initialState,action){

@@ -1,0 +1,13 @@
+.register {
+    form {
+        background: #ccc;  
+        padding-bottom: 15px;      
+        .row {
+            margin-right: 0px !important;
+            margin-left: 0px !important;  
+            .no-padding {
+                padding: 0px !important;
+            }          
+        }
+    }
+}

@@ -9,11 +9,11 @@ router.get('/', function(req, res, next) {
 router.post('/login', function(req, res, next) {
   User.find({$and:[{email:req.body.email},{password:req.body.password}]},function(err,data){
     if(err){
-      res.json({err:err});
+      res.json({err:err,code:0});
     }else if(data.length){
-      res.json({msg:'Logged in successfully',data:data[0]})
+      res.json({msg:'Logged in successfully',data:data, code:2})
     }else{
-      res.json({msg:'Invalid email or password'})
+      res.json({msg:'Invalid email or password',code:1})
     }
   });
 });
@@ -21,9 +21,9 @@ router.post('/login', function(req, res, next) {
 router.post('/register', function(req, res, next) {
   User.find({$and:[{email: req.body.email},{mobile: req.body.mobile}]},function(err,data){
     if(err) {
-      res.json({err:err});
+      res.json({err:err,code:0});
     }else if(data.length) {
-      res.json({msg:'User already registered'});
+      res.json({msg:'User already registered',code:1});
     }else {
       var user = new User({
         firstname: req.body.firstname,
@@ -35,9 +35,9 @@ router.post('/register', function(req, res, next) {
       });
       user.save(function(err,docs){
         if(err){
-          res.json({err:err});
+          res.json({err:err,code:0});
         }else {
-          res.json({msg:'Registered successfully',data:docs})
+          res.json({msg:'Registered successfully',data:docs,code:2})
         }
       })
     }

@@ -4,6 +4,7 @@ import { Route, NavLink } from 'react-router-dom';
 import AllUsers from './allUsers';
 import UserProfile from './userProfile';
 import SideNavbar from '../common/sideNavbar';
+import Header from '../common/header';
 
 import '../../css/dashboard/dashboard.scss';
 
@@ -12,6 +13,7 @@ class  Dashboard extends Component {
     return (
       <React.Fragment> 
         <div className="row">
+          <Header/>
           <div className="col-md-3">
             <SideNavbar urlParams={this.props.match}/>
           </div>
