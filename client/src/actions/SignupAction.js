@@ -4,7 +4,6 @@ import axios from 'axios';
 export const signUp = (data,context) => (dispatch) => {
     axios.post(SIGNUP_URL,data).then(res=> {
         if(res.data.data){
-            console.log(res.data)
             dispatch({
                 type:USER_SIGNUP,
                 payload: res.data.data
