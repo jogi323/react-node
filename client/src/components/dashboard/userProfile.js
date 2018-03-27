@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { Table } from 'react-bootstrap';
+import {withRouter} from 'react-router';
 
 import '../../css/dashboard/UserProfile.scss';
 
@@ -13,7 +14,7 @@ class UserProfile extends Component {
   }
 
   componentWillMount(){
-   this.state.userDetails = JSON.parse(localStorage.getItem("userDetails"));
+    this.state.userDetails = JSON.parse(localStorage.getItem("userDetails"));
   };
 
   render() {
@@ -43,4 +44,4 @@ class UserProfile extends Component {
   }
 }
 
-export default UserProfile;
+export default withRouter(UserProfile);

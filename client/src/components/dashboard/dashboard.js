@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import {withRouter} from 'react-router';
 
 import AllUsers from './AllUsers';
 import UserProfile from './UserProfile';
@@ -18,9 +19,9 @@ class  Dashboard extends Component {
             <SideNavbar urlParams={this.props.match}/>
           </div>
           <div className="col-md-9">
-            <Route path={`${this.props.match.url}/userdetails`} component={UserProfile} />
-            <Route path={`${this.props.match.url}/allusers`} component={AllUsers} />        
-            <Route exact path={this.props.match.url} component={UserProfile} /> 
+            <Route path={this.props.match.url + '/userdetails'} component={UserProfile} />
+            <Route path={this.props.match.url + '/allusers'} component={AllUsers} />        
+            {/* <Route path={this.props.match.url} component={UserProfile} /> */}
             {this.props.children}
           </div>
         </div>
@@ -29,4 +30,4 @@ class  Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

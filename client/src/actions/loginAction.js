@@ -10,7 +10,7 @@ export const login =  (data,context) => (dispatch) => {
                 type:USER_LOGIN,
                 payload: res.data.data
             });
-            context.history.push('/dashboard');
+            context.history.push('/dashboard/userdetails');
         }else{
             Alert.error("Invalid user details",ALERT_CONFIG);
             context.history.push('/');
