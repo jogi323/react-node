@@ -2,6 +2,11 @@
     margin-top: 5%;
     form {
         background: #ccc;  
-        padding-bottom: 15px;      
+        padding-bottom: 15px;   
+        .submit {
+            .signup-page {
+                margin-left: 5%;
+            }
+        }   
     }
 }

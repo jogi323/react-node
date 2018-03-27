@@ -29,7 +29,7 @@ class Login extends Component {
     }
     this.props.login(payload,this.props);
   };
-
+  
   render() {
     return (
       <div>
@@ -38,15 +38,15 @@ class Login extends Component {
             <h2>Here you can login!!!</h2>
             <div className="form-group">
                 <label>User name: </label>
-                <input type="text" name = "email" className="form-control" value={this.state.email} onChange={this.inputChnaged} autoComplete ="email"/>
+                <input type="email" name = "email" className="form-control" value={this.state.email} onChange={this.inputChnaged} autoComplete ="email"/>
             </div>
             <div className="form-group">
                 <label>Password: </label>
                 <input type="password" name = "password" className="form-control" value={this.state.password} onChange={this.inputChnaged} autoComplete ="password"/>
             </div>
-            <div>
+            <div className="submit">
                 <button className="btn btn-primary" onClick={this.login}>Login</button>
-                <span>
+                <span className="signup-page">
                   Don't have account yet??<span><Link to="/signup">Signup</Link></span>
                 </span>
             </div>

@@ -1,5 +1,6 @@
-import { USER_LOGIN, LOGIN_URL } from '../constants/constant';
+import { USER_LOGIN, LOGIN_URL, ALERT_CONFIG } from '../constants/constant';
 import axios from 'axios';
+import Alert from 'react-s-alert';
 
 export const login =  (data,context) => (dispatch) => {
     axios.post(LOGIN_URL,data).then(res=>{
@@ -11,11 +12,13 @@ export const login =  (data,context) => (dispatch) => {
             });
             context.history.push('/dashboard');
         }else{
-            console.log("Invalid user details")
+            Alert.error("Invalid user details",ALERT_CONFIG);
+            context.history.push('/');
         }
         
     })
     .catch(error => {
-        console.log(error)
+        Alert.error(error,ALERT_CONFIG);
+        context.history.push('/');
     })
 }

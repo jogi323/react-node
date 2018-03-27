@@ -64,7 +64,7 @@ class Signup extends Component {
             </div>
             <div className="form-group">
               <label>Email-ID: </label>
-              <input type="text" name = "email" className="form-control" value={this.state.email} onChange={this.inputChnaged} autoComplete='email'/>
+              <input type="email" name = "email" className="form-control" value={this.state.email} onChange={this.inputChnaged} autoComplete='email'/>
             </div>
             <div className="form-group">
               <label>Password: </label>
@@ -74,9 +74,9 @@ class Signup extends Component {
               <label>Image: </label>
               <FileBase64 multiple={false} onDone={this.getFiles} />
             </div>
-            <div>
+            <div className="submit">
               <button className="btn btn-primary" onClick={this.signup}>Signup</button>
-              <span>
+              <span className="login-page">
                 Already have account??<span><Link to="/">Login</Link></span>
               </span>
             </div>
