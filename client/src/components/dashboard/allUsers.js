@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router';
 import { connect } from 'react-redux';
+import { ScaleLoader } from 'react-spinners';
+
 import { allUsersDetails } from '../../actions/AllActions';
+import '../../css/dashboard/AllUsers.scss';
 
 class AllUsers extends Component {
-  componentWillMount(){
-    this.props.allUsersDetails(); 
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: this.props.allUsers.length? false:true
+    }
   }
+
+  componentDidMount(){
+    this.props.allUsersDetails(); 
+  };
+
+  componentDidUpdate(nextProps, nextState){
+    if( nextProps.allUsers.length !== this.props.allUsers.length){
+      this.setState({loading:false});
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
         <h2>All users list:</h2>
+        <div className="loading-icon">
+          <ScaleLoader color={'#123abc'} loading={this.state.loading} />
+        </div>
         <div className="table-responsive">
         <table className="table table-striped">
           <thead>

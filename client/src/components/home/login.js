@@ -57,15 +57,4 @@ class Login extends Component {
   }
 }
 
-Login.propTypes  = {
-  email: PropTypes.string,
-  password: PropTypes.string
-}
- 
-const mapStateToProp = (state) =>{
-  return {
-    userDetails: state.login.userDetails
-  }
-  
-};
-export default connect(mapStateToProp,{login})(Login);
+export default connect(null,{login})(Login);
