@@ -10,6 +10,14 @@ import Header from '../common/Header';
 import '../../css/dashboard/dashboard.scss';
 
 class  Dashboard extends Component {
+  constructor(){
+    super();
+  }
+  componentWillMount(){
+    if(!localStorage.getItem('userDetails')){
+      this.props.history.push("/");
+    }
+  }
   render() {
     return (
       <React.Fragment> 
